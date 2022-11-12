@@ -1,0 +1,10 @@
+// main styles | variables
+@import "./normalize.scss";
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "./main.scss";
+
+// components
+@import "../Components/Header/Header.scss";
+@import "../Components/Footer/Footer.scss";
+@import "../Components/Burger/Burger.scss";
