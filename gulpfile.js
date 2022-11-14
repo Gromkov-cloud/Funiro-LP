@@ -11,6 +11,9 @@ const browserSync = require('browser-sync').create()
 const gcmq = require('gulp-group-css-media-queries');
 const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename")
+const babel = require('gulp-babel');
+const minify = require("gulp-babel-minify");
+const ttf2woff = require('gulp-ttf2woff');
 
 const paths = {
     html: {
@@ -31,11 +34,11 @@ const paths = {
     },
     fonts: {
         src: "./src/assets/fonts/**",
-        dest: "./app/fonts/"
+        dest: "./app/assets/fonts/"
     },
     images: {
         src: "./src/assets/images/**",
-        dest: "./app/images/"
+        dest: "./app/assets/images/"
     },
     clean: {
         src: "./app/"
@@ -67,6 +70,16 @@ function styles() {
 function scripts() {
     return src(paths.scripts.src)
         .pipe(webpackStream(webpackConfig, webpack))
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(dest([paths.scripts.dest]))
+        .pipe(rename("bundle.min.js"))
+        .pipe(minify({
+            mangle: {
+                keepClassName: true
+            }
+        }))
         .pipe(dest([paths.scripts.dest]))
         .pipe(browserSync.stream())
 }
@@ -79,6 +92,7 @@ function images() {
 
 function fonts() {
     return src(paths.fonts.src)
+        .pipe(ttf2woff())
         .pipe(dest(paths.fonts.dest))
         .pipe(browserSync.stream())
 }
