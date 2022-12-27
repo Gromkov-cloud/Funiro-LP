@@ -1,0 +1,92 @@
+.furniture {
+    margin-bottom: 88px;
+    // .furniture__container
+
+    &__container {
+    }
+
+    // .furniture__gallery
+
+    &__gallery {
+    }
+
+    // .furniture__heading-container
+
+    &__heading-container {
+    }
+}
+.section-title-container {
+}
+.section-title-subtitle {
+    display: block;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+    text-align: center;
+
+    color: #616161;
+}
+.furniture-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+
+    gap: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: all 0.2s ease;
+
+    // .furniture-gallery__col
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+
+        img {
+            filter: grayscale(1);
+            cursor: pointer;
+
+            transition: filter 0.26s ease;
+
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    // .furniture-gallery__row
+
+    &__row {
+        display: flex;
+        gap: 16px;
+
+        &_top-left {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        &_bottom-left {
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        &_top-right {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        &_bottom-right {
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+}

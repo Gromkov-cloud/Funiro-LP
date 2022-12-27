@@ -1,0 +1,263 @@
+.products {
+    // .products__container
+
+    &__container {
+    }
+
+    // .products__wrapper
+
+    &__wrapper {
+    }
+
+    // .products__title-container
+
+    &__title-container {
+    }
+
+    // .products__title-heading
+
+    &__title-heading {
+    }
+
+    // .products__main
+
+    &__main {
+    }
+
+    // .products__list
+
+    &__list {
+    }
+
+    &__button-more {
+        display: block;
+        margin: 32px auto 0;
+    }
+}
+.products-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    // .products-list__item
+
+    &__item {
+    }
+}
+.product-card {
+    position: relative;
+
+    width: 285px;
+
+    background-color: $LightBg;
+
+    &:hover .product-card-pop-up__container {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    // .product-card__thumb
+
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+
+        width: 285px;
+        height: 300px;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+
+            margin: 0 auto;
+        }
+    }
+
+    // .product-card__desc
+
+    &__desc {
+        padding: 16px 16px 30px;
+    }
+
+    // .product-card__name
+
+    &__name {
+        margin: 0 0 8px;
+
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+    }
+
+    // .product-card__sub
+
+    &__sub {
+        margin: 0 0 8px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $Gray3;
+    }
+
+    // .product-card__price-container
+
+    &__price-container {
+    }
+
+    // .product-card__price
+
+    &__price {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    // .product-card__discount
+
+    &__discount {
+        margin: 0 0 0 16px;
+
+        font-size: 16px;
+        line-height: 150%;
+        text-decoration-line: line-through;
+        color: $Gray4;
+    }
+
+    // .product-card__label-container
+
+    &__label-container {
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        top: 24px;
+        right: 24px;
+    }
+
+    // .product-card__label
+
+    &__label {
+        position: relative;
+        width: 48px;
+        height: 48px;
+
+        border-radius: 50%;
+
+        // .product-card__label_discount
+
+        &_discount {
+            background-color: $Red;
+        }
+
+        // .product-card__label_new
+
+        &_new {
+            background-color: $Green;
+        }
+    }
+
+    &__label-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $White;
+    }
+
+    // .product-card__pop-up
+
+    &__pop-up {
+    }
+
+    // .product-card__cart
+
+    &__cart {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.product-card-pop-up {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        background-color: $Gray1-opacity;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: all 0.26s ease-out;
+    }
+
+    // .product-card-pop-up__actions
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+
+        margin: 24px 0 0;
+    }
+
+    // .product-card-pop-up__action-container
+
+    &__action-container {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                stroke: $Primary;
+                fill: $Primary;
+            }
+            .product-card-pop-up__action-name {
+                color: $Primary;
+            }
+        }
+    }
+
+    // .product-card-pop-up__action-icon
+
+    &__action-icon {
+        display: flex;
+
+        svg {
+            stroke: $White;
+            fill: $White;
+
+            transition: all 0.16s ease-out;
+        }
+    }
+
+    // .product-card-pop-up__action-name
+
+    &__action-name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: $White;
+
+        transition: color 0.16s ease-out;
+    }
+}

@@ -4,7 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gulp setup</title>
+        <title>Funiro</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="./styles/bundle.min.css" />
         <link
             rel="shortcut icon"
@@ -13,12 +17,16 @@
         />
     </head>
     <body>
-        <!-- @@include("./Components/Header/Header.html") -->
-        <h2>
-            &lt @v_gromkov> <br />
-            Gulp setup
-        </h2>
-        <!-- @@include("./Components/Footer/Footer.html") -->
-        <script src="scripts/bundle.min.js"></script>
+        @@include("./Components/BodyOverlay/BodyOverlay.html")
+        @@include("./Components/Svg/Svg.html")
+        @@include("./Components/FirstScreen/FirstScreen.html")
+        @@include("./Components/Features/Features.html")
+        @@include("./Components/Products/Products.html")
+        @@include("./Components/Inspirations/Inspirations.html")
+        @@include("./Components/Tips/Tips.html")
+        @@include("./Components/Furniture/Furniture.html")
+        @@include("./Components/Footer/Footer.html")
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="scripts/bundle.js"></script>
     </body>
 </html>

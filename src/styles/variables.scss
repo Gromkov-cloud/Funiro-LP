@@ -1,6 +1,29 @@
-:root {
-    --Gilroy: Gilroy, sans-serif;
-    --white: #ffffff;
-}
+// Fonts
 
-$main-color: rgb(16, 72, 226);
+$Gilroy: "Gilroy", sans-serif;
+
+// Colors
+
+$Black: #000000;
+$White: #ffffff;
+$Gray1: #3a3a3a;
+$Gray1-opacity: #3a3a3ad2;
+$Gray2: #616161;
+$Gray3: #898989;
+$Gray4: #b0b0b0;
+$Gray5: #d8d8d8;
+$LightBg: #f4f5f7;
+$Primary: #e89f71;
+$Primary-opacity: #e89f7167;
+$Green: #2ec1ac;
+$Red: #e97171;
+
+// sizes
+
+$container-width: 1320px;
+$container-padding: 44px 40px;
+$container-padding-L: 35px 15px;
+$Laptop: 1024px;
+$Laptop-1: 1023px;
+$Tablet: 767px;
+$MobL: 425px;

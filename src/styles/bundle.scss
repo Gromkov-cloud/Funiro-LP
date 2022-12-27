@@ -3,8 +3,19 @@
 @import "./fonts.scss";
 @import "./variables.scss";
 @import "./main.scss";
+@import "../../node_modules/swiper/swiper-bundle.css";
+@import "./slider.scss";
+// @import "../Components//Svg/Svg.scss";
 
 // components
 @import "../Components/Header/Header.scss";
+@import "../Components/FirstScreen/FirstScreen.scss";
+@import "../Components/Burger/Burger.scss";
+@import "../Components/BodyOverlay/BodyOverlay.scss";
 @import "../Components/Footer/Footer.scss";
 @import "../Components/Burger/Burger.scss";
+@import "../Components/Products/Products.scss";
+@import "../Components/Features/Features.scss";
+@import "../Components/Inspirations/Inspirations.scss";
+@import "../Components/Tips/Tips.scss";
+@import "../Components/Furniture/Furniture.scss";

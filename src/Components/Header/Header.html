@@ -5,35 +5,102 @@
                 <div class="header__logo">
                     <div class="logo">
                         <!-- <img src="#" alt="Logo" class="logo__image" /> -->
-                        <a href="#" class="logo__text">Logo</a>
+                        <a href="#" class="logo__text">Funiro.</a>
                     </div>
                 </div>
-                <div class="header__nav">
+                <div class="header__nav" id="nav">
+                    <div class="nav__overlay"></div>
                     <nav class="nav">
                         <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Link</a>
+                            <li class="nav__item nav__item_multiple">
+                                <a class="nav__link">Products</a>
+                                <span class="nav__arrow-down">
+                                    <svg width="20px" height="20px">
+                                        <use href="#arrow-down"></use>
+                                    </svg>
+                                </span>
+                                <div class="nav__siblings">
+                                    <a href="#" class="nav__link_sub"
+                                        >Products</a
+                                    >
+                                    <a href="#" class="nav__link_sub"
+                                        >Products</a
+                                    >
+                                    <a href="#" class="nav__link_sub"
+                                        >Products</a
+                                    >
+                                </div>
                             </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Link</a>
+                            <li class="nav__item nav__item_multiple">
+                                <a class="nav__link">Rooms</a>
+                                <span class="nav__arrow-down">
+                                    <svg width="20px" height="20px">
+                                        <use href="#arrow-down"></use>
+                                    </svg>
+                                </span>
+                                <div class="nav__siblings">
+                                    <a href="#" class="nav__link_sub">Rooms</a>
+                                    <a href="#" class="nav__link_sub">Rooms</a>
+                                    <a href="#" class="nav__link_sub">Rooms</a>
+                                </div>
                             </li>
+
                             <li class="nav__item">
-                                <a href="#" class="nav__link">Link</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Link</a>
+                                <a href="#" class="nav__link">Inspirations</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="header__actions">
-                <div class="header__login">
-                    <div class="login">
-                        <button class="login__btn">Log In</button>
-                    </div>
+            <div class="header__search" id="search-form">
+                <div class="search-form__container">
+                    <form action="#" class="search-form">
+                        <label class="search-form__input-container">
+                            <input
+                                type="text"
+                                name=""
+                                id="search-input"
+                                class="search-form__input"
+                                placeholder="Search for minimalist chair"
+                            />
+                            <div class="search-form__search-image">
+                                <svg width="20px" height="20px">
+                                    <use href="#search-desk"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </form>
                 </div>
             </div>
+            <div class="header__actions">
+                <div class="search-form__mobile" id="search-mobile-btn">
+                    <svg width="24px" height="24px">
+                        <use href="#search-mob"></use>
+                    </svg>
+                </div>
+                <div class="header__favorites">
+                    <div class="favorites">
+                        <svg width="24px" height="24px">
+                            <use href="#favorites"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__cart">
+                    <div class="cart">
+                        <svg width="24px" height="24px">
+                            <use href="#cart"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__profile-thumb">
+                    <img
+                        src="./assets/images/site_logo.png"
+                        alt="Your profile photo"
+                        class="profile-thumb"
+                    />
+                </div>
+            </div>
+            @@include("../Burger/Burger.html")
         </div>
     </div>
 </header>

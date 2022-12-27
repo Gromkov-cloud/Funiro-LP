@@ -1,28 +1,48 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
 
-    min-height: 100vh;
-    height: 100%;
+    color: $Gray1;
+    background-color: $White;
 
-    color: var(--dark-blue);
-    background-color: var(--white);
-
-    font-family: var(--Gilroy);
+    font-family: $Gilroy;
     font-size: 10px;
 }
 
-h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+    max-width: $container-width;
+    width: 100%;
+    padding: $container-padding;
+    margin: 0 auto;
 
+    @media screen and (max-width: $Laptop-1) {
+        padding: $container-padding-L;
+    }
+}
+
+.section-title-container {
+    width: fit-content;
+    margin: 0 auto 32px;
+}
+.section-title-heading {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
-
-    font-size: 70px;
-    font-weight: 400;
-    text-align: center;
+    padding: 0;
 }
 
 ul {
@@ -45,4 +65,36 @@ button {
     cursor: pointer;
     outline: none;
     border: none;
+}
+
+.button {
+    background: $Primary;
+    border: 1px solid $Primary;
+
+    font-weight: 600;
+
+    line-height: 150%;
+    color: $White;
+
+    transition: all 0.26s ease-out;
+
+    &:hover {
+        background-color: $White;
+        color: $Primary;
+    }
+
+    &_m {
+        padding: 12px 60px;
+        font-size: 16px;
+    }
+
+    &_l {
+        width: 100%;
+        padding: 24px;
+        font-size: 20px;
+
+        @media screen and (max-width: $Laptop-1) {
+            padding: 12px;
+        }
+    }
 }
